@@ -1,0 +1,179 @@
+// Theme Name: HTML StarterKit
+// Theme URI: https://github.com/fahmadrifki/html-starterkit2
+// Description: HTML StarterKit versi 2.0
+// Author: Ahmad Rifki Fachrudin
+// Author URI: https://fahmadrifki.github.io/
+// Version: 2.0
+
+/*--- Main Base Color ---*/
+$black : #000000
+$transparent : rgba(0,0,0,0)
+$white : #FFFFFF
+/*--- /Main Base Color ---*/
+
+/*--- Mixins ---*/
+
+/*--- Animation ---*/
+=animation($name, $property)
+  -webkit-animation: $name $property
+  -moz-animation: $name $property
+  -ms-animation: $name $property
+  -o-animation: $name $property
+  animation: $name $property
+
+/*--- /Animation ---*/
+
+/*--- Keyframes ---*/
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @-o-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+/*--- /Keyframes ---*/
+
+/*--- Transform ---*/
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+/*--- /Transform ---*/
+
+/*--- Box Shadows ---*/
+=box-shadow($top, $left, $blur, $clear, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow: inset $top $left $blur $clear $color
+    -moz-box-shadow: inset $top $left $blur $clear $color
+    box-shadow: inset $top $left $blur $clear $color
+  @else
+    -webkit-box-shadow: $top $left $blur $clear $color
+    -moz-box-shadow: $top $left $blur $clear $color
+    box-shadow: $top $left $blur $clear $color
+
+/*--- /Box Shadows ---*/
+
+/*--- /Mixin ---*/
+
+/*--- Bg Color ---*/
+.black
+  background-color: $black !important
+
+.transparent
+  background-color: $transparent !important
+
+.white
+  background-color: $white !important
+
+/*--- /Bg Color ---*/
+
+/*--- Text Color ---*/
+.text-black
+  color: $black !important
+
+.text-white
+  color: $white !important
+
+/*--- /Text Color ---*/
+
+/*--- Text Weight ---*/
+.fw-100
+  font-weight: 100 !important
+
+.fw-200
+  font-weight: 200 !important
+
+.fw-300
+  font-weight: 300 !important
+
+.fw-400
+  font-weight: 400 !important
+
+.fw-500
+  font-weight: 500 !important
+
+.fw-600
+  font-weight: 600 !important
+
+.fw-700
+  font-weight: 700 !important
+
+.fw-800
+  font-weight: 800 !important
+
+.fw-900
+  font-weight: 900 !important 
+/*--- /Text Weight ---*/
+
+/*--- Button ---*/
+.btn-line-rounded
+  border-radius: 50px
+  padding: 0.356rem 0.975rem
+  transition: .3s all
+  cursor: pointer
+
+  &:hover
+    color: $white !important
+    border: 2px solid rgba(0,0,0,0)
+    text-decoration: none
+    transition: .3s all
+
+.btn-white
+  color: $white !important
+  border: 2px solid $white
+
+  &:hover
+    background-color: $white !important
+    color: $black !important
+    text-decoration: none
+
+/*--- /Button ---*/
+
+/*--- Image ---*/
+.of-cover
+  object-fit: cover !important
+
+.img-circle
+  border-radius: 50%
+
+.img-zoom
+  +transform(scale(1.5))
+
+.img-rounded-5
+  border-radius: 5px
+
+.img-rounded-10
+  border-radius: 10px
+
+/*--- /Image ---*/
+
+/*--- Scroll Horizontal ---*/
+.scroll 
+ white-space: nowrap
+ overflow-x: auto
+ -webkit-overflow-scrolling: touch
+ -ms-overflow-style: -ms-autohiding-scrollbar
+
+.item-scroll,
+.vertical-align-middle 
+  display: inline-blockl
+  vertical-align: middle
+
+
+.scroll::-webkit-scrolbar 
+  display: none
+
+/*--- /Scroll Horizontal ---*/
+
+/*--- Header ---*/
+
+/*--- /Header ---*/
+
+/*--- Footer ---*/
+
+/*--- /Footer ---*/
